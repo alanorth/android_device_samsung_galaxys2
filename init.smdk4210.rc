@@ -9,11 +9,14 @@ on early-init
 
 	# for backwards compatibility
 	symlink /mnt/sdcard /sdcard
-	symlink /mnt/external /sdcard
+	symlink /mnt/extsdcard /extsdcard
 
 # Vibetonz
     export VIBE_PIPE_PATH /dev/pipes
     mkdir /dev/pipes 0771 shell shell
+
+# Disable CFQ slice idle delay
+    write /sys/block/mmcblk0/queue/iosched/slice_idle 0
 
     write /proc/sys/kernel/panic_on_oops 1
     write /proc/sys/kernel/hung_task_timeout_secs 0
@@ -163,6 +166,7 @@ on fs
     chown system media_rw /sys/class/mdnie/mdnie/mode
     chown system media_rw /sys/class/mdnie/mdnie/outdoor
     chown system media_rw /sys/class/mdnie/mdnie/scenario
+    write /sys/class/mdnie/mdnie/scenario 4
 
 # Permissions for uart_sel and usb_sel
     chown system radio /sys/class/sec/switch/uart_sel/value

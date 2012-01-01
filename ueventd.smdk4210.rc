@@ -14,6 +14,8 @@
 /dev/video21              0666   system     system
 /dev/pmem                 0660   system     graphics
 /dev/pmem_gpu1            0660   system     graphics
+# logger should be world writable (for logging) but not readable
+/dev/log/*                0662   root       log
 /dev/i2c-7                0666   system     system
 /dev/CEC                  0666   system     system
 /dev/HPD                  0666   system     system
@@ -24,5 +26,6 @@
 /dev/srp_ctrl             0666   system     audio
 /dev/umts*                0660   system     radio
 /dev/link_pm              0660   system     radio
+/dev/block/mmcblk0p8      0660   system     radio
 /dev/akm8975              0660   system     system
 /dev/accelerometer        0660   system     system
