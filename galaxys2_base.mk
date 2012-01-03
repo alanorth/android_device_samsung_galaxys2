@@ -65,8 +65,7 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES := \
-    com.android.future.usb.accessory \
-    VolumeHack
+    com.android.future.usb.accessory
 
 # Charger
 #PRODUCT_PACKAGES += \
