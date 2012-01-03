@@ -26,6 +26,13 @@ on early-init
     write /proc/sys/kernel/sched_compat_yield 1
     write /proc/sys/kernel/sched_child_runs_first 0
 
+# permissions for tvout
+	chmod 0777 /dev/graphics/fb0
+
+# permission for HDMI audio path
+    chown media audio /sys/class/hdmi_audio/hdmi_audio/hdmi_audio_set_ext
+	chmod 0777 /sys/class/hdmi_audio/hdmi_audio/hdmi_audio_set_ext
+
 # ko files for FM Radio
     insmod /lib/modules/Si4709_driver.ko
 
@@ -146,7 +153,7 @@ on fs
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
 
 # Vibetonz
-    chmod 0660 /dev/tspdrv
+    chmod 0777 /dev/tspdrv
     chown root shell /dev/tspdrv
 
 # Permissions for LCD
