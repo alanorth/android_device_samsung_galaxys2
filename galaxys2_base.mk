@@ -83,7 +83,7 @@ PRODUCT_PACKAGES += \
 
 # Ril
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.telephony.ril_class=smdk4210 \
+	ro.telephony.ril_class=Smdk4210RIL \
 	mobiledata.interfaces=pdp0,wlan0,gprs,ppp0
 
 # Filesystem management tools
