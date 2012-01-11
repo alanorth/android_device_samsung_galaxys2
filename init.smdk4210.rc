@@ -4,12 +4,12 @@ on early-init
 	export EXTERNAL_STORAGE /mnt/sdcard
     mkdir /mnt 0775 system system
     mkdir /mnt/sdcard 0775 system system
-    mkdir /mnt/extsdcard 0775 system system
+    mkdir /mnt/emmc 0775 system system
     mkdir /mnt/usbdisk 0775 system system
 
 	# for backwards compatibility
 	symlink /mnt/sdcard /sdcard
-	symlink /mnt/extsdcard /extsdcard
+	symlink /mnt/emmc /emmc
 
 # Vibetonz
     export VIBE_PIPE_PATH /dev/pipes
