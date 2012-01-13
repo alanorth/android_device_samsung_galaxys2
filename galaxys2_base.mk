@@ -66,7 +66,8 @@ PRODUCT_COPY_FILES += \
 # Packages
 PRODUCT_PACKAGES := \
     com.android.future.usb.accessory \
-    TvOut
+    TvOut \
+    TvOutHack
 
 # Charger
 #PRODUCT_PACKAGES += \
