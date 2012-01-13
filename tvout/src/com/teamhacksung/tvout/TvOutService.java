@@ -24,20 +24,19 @@ public class TvOutService extends Service {
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
             if (Intent.ACTION_HDMI_AUDIO_PLUG.equals(action)) {
+                getTvoutInstance();
                 int state = intent.getIntExtra("state", 0);
                 if (state == 1 && !mTvOut.getStatus()) {
                     // Enable when cable is plugged
                     Log.i(TAG, "HDMI plugged");
-                    getTvoutInstance();
                     mWasOn = false;
                     enable();
                 } else if (mTvOut.getStatus()) {
                     // Disable when cable is unplugged
                     Log.i(TAG, "HDMI unplugged");
-                    releaseTvout();
                     mWasOn = false;
                     disable();
-                    stopSelf();
+                    releaseTvout();
                 }
             } else if (Intent.ACTION_SCREEN_ON.equals(action)) {
                 if (mWasOn) {
@@ -46,7 +45,7 @@ public class TvOutService extends Service {
                     enable();
                 }
             } else if (Intent.ACTION_SCREEN_OFF.equals(action)) {
-                if (mTvOut.getStatus()) {
+                if (mTvOut != null && mTvOut.getStatus()) {
                     Log.i(TAG, "Screen Off - Pausing TvOut stream");
                     mWasOn = true;
                     disable();
@@ -76,7 +75,7 @@ public class TvOutService extends Service {
     }
 
     private boolean getTvoutInstance() {
-        releaseTvout();
+        if (mTvOut != null) return true;
 
         try {
             mTvOut = new Tvout();
@@ -97,15 +96,18 @@ public class TvOutService extends Service {
     @Override
     public void onDestroy() {
         unregisterReceiver(mReceiver);
+        releaseTvout();
         super.onDestroy();
     }
 
     private void enable() {
+        if (mTvOut == null) return;
         mTvOut.setStatus(true);
         mTvOut.setCableStatus(true);
     }
 
     private void disable() {
+        if (mTvOut == null) return;
         mTvOut.setStatus(false);
         mTvOut.setCableStatus(false);
     }
