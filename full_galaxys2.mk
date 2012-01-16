@@ -28,7 +28,7 @@ $(call inherit-product, device/samsung/galaxys2/galaxys2.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_galaxys2
-PRODUCT_DEVICE := galaxys2
+PRODUCT_DEVICE := GT-I9100
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := GT-I9100
