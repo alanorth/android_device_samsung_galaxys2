@@ -29,8 +29,7 @@ PRODUCT_COPY_FILES := \
 
 # Audio
 PRODUCT_COPY_FILES += \
-	device/samsung/galaxys2/configs/asound.conf:system/etc/asound.conf \
-    device/samsung/galaxys2/configs/audio_effects.conf:system/etc/audio_effects.conf
+	device/samsung/galaxys2/configs/asound.conf:system/etc/asound.conf
 
 # Vold
 PRODUCT_COPY_FILES += \
