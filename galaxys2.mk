@@ -69,7 +69,7 @@ PRODUCT_COPY_FILES += \
 
 # the kernel itself
 PRODUCT_COPY_FILES += \
-    device/samsung/galaxys2/kernel:kernel
+    device/samsung/galaxys2/zImage:kernel
 
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/samsung/galaxys2/galaxys2-vendor.mk)
