@@ -43,8 +43,9 @@ on early-init
     chmod 0775 /efs/bluetooth
     chmod 0775 /efs/wifi
 
-    insmod /lib/modules/j4fs.ko
-    mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs
+# causes kernel panic
+#    insmod /lib/modules/j4fs.ko
+#    mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs
 
     mkdir /data/misc/vpn/profiles 0770 system system
     mkdir /data/misc/radio 0775 radio system
