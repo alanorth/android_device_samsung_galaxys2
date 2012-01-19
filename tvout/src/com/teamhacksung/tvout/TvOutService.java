@@ -39,16 +39,16 @@ public class TvOutService extends Service {
                     releaseTvout();
                 }
             } else if (Intent.ACTION_SCREEN_ON.equals(action)) {
-                if (mWasOn) {
+                if (mTvOut != null && mWasOn) {
                     Log.i(TAG, "Screen On - Resume TvOut stream");
                     mWasOn = false;
-                    enable();
+                    mTvOut.setSuspendStatus(false);
                 }
             } else if (Intent.ACTION_SCREEN_OFF.equals(action)) {
                 if (mTvOut != null && mTvOut.getStatus()) {
                     Log.i(TAG, "Screen Off - Pausing TvOut stream");
                     mWasOn = true;
-                    disable();
+                    mTvOut.setSuspendStatus(true);
                 }
             }
         }
@@ -104,6 +104,7 @@ public class TvOutService extends Service {
         if (mTvOut == null) return;
         mTvOut.setStatus(true);
         mTvOut.setCableStatus(true);
+        mTvOut.setSuspendStatus(false);
     }
 
     private void disable() {
