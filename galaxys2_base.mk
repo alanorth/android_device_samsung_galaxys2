@@ -66,7 +66,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES := \
     com.android.future.usb.accessory \
     TvOut \
-    TvOutHack
+    TvOutHack \
+    camera.exynos4
 
 # Charger
 #PRODUCT_PACKAGES += \
