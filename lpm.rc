@@ -39,10 +39,10 @@ on fs
 	chmod 0666 /dev/log/main
 	chmod 0666 /dev/log/event    
 
-#on post-fs-data
-# causes kernel panic
-#	insmod /lib/modules/j4fs.ko
-#	mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs ro
+on post-fs-data
+# insmod kernel modules
+	insmod /lib/modules/j4fs.ko
+	mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs ro
 
 on boot
 # CPU Frequency Governor
