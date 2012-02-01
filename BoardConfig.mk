@@ -73,6 +73,9 @@ BOARD_USE_SECTVOUT := true
 # Audio
 BOARD_USE_YAMAHAPLAYER := true
 
+# OMX
+BOARD_USE_SAMSUNG_OMX := true
+
 # Camera
 ifeq ($(USE_CAMERA_STUB),false)
 BOARD_CAMERA_LIBRARIES := libcamera
