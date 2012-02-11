@@ -253,4 +253,7 @@
          legacy USB manager should be started. -->
     <string name="config_legacyUmsLunFile">/sys/class/android_usb/f_mass_storage/lun0/file</string>
 
+    <!-- Workaround for devices with broken keyboards -->	
+    <bool name="config_forceDisableHardwareKeyboard">true</bool>
+
 </resources>
