@@ -109,6 +109,10 @@ on post-fs-data
 	chmod 0660 /dev/usb_mtp_gadget
 	chown system system /dev/usb_mtp_gadget
 
+# terminal mode
+    chmod 0660 /sys/class/android_usb/android0/terminal_version
+    chown system system /sys/class/android_usb/android0/terminal_version
+
 # NFC
     setprop ro.nfc.port "I2C"
     chmod 0600 /dev/pn544
@@ -245,6 +249,7 @@ on post-fs-data
     chown system radio /sys/class/sec/switch/otg_test
     chown system radio /sys/class/sec/switch/adc_debounce_time
     chown system radio /sys/class/sec/switch/status
+    chown system radio /sys/class/sec/switch/adc
     chown system radio /mnt/.lfs/sw_sel
 
 # Permissions for OTG Test
