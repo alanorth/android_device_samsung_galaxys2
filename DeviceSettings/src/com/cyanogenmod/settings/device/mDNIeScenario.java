@@ -19,17 +19,18 @@ package com.cyanogenmod.settings.device;
 import android.content.Context;
 
 import android.content.SharedPreferences;
+import android.util.AttributeSet;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
 
 public class mDNIeScenario extends Preference implements OnPreferenceChangeListener {
 
-    public mDNIeScenario(Context context) {
-		super(context);
-	}
+    public mDNIeScenario(Context context, AttributeSet attrs) {
+        super(context,attrs);
+    }
 
-	private static final String FILE = "/sys/class/mdnie/mdnie/scenario";
+    private static final String FILE = "/sys/class/mdnie/mdnie/scenario";
 
     public static boolean isSupported() {
         return Utils.fileExists(FILE);

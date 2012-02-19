@@ -17,7 +17,7 @@
 package com.cyanogenmod.settings.device;
 
 import android.content.Context;
-
+import android.util.AttributeSet;
 import android.content.SharedPreferences;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -25,11 +25,11 @@ import android.preference.PreferenceManager;
 
 public class mDNIeOutdoor extends Preference implements OnPreferenceChangeListener {
 
-    public mDNIeOutdoor(Context context) {
-		super(context);
-	}
+    public mDNIeOutdoor(Context context, AttributeSet attrs) {
+		super(context, attrs);
+    }
 
-	private static final String FILE = "/sys/class/mdnie/mdnie/outdoor";
+    private static final String FILE = "/sys/class/mdnie/mdnie/outdoor";
 
     public static boolean isSupported() {
         return Utils.fileExists(FILE);
