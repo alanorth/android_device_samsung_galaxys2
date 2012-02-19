@@ -67,7 +67,8 @@ PRODUCT_PACKAGES := \
     com.android.future.usb.accessory \
     TvOut \
     TvOutHack \
-    camera.exynos4
+    camera.exynos4 \
+    GalaxyS2Settings
 
 # Charger
 #PRODUCT_PACKAGES += \
