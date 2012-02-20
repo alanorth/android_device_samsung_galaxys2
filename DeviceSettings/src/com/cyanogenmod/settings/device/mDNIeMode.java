@@ -21,13 +21,15 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.AttributeSet;
 import android.preference.Preference;
+import android.preference.ListPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
 
-public class mDNIeMode extends Preference implements OnPreferenceChangeListener {
+public class mDNIeMode extends ListPreference implements OnPreferenceChangeListener {
 
     public mDNIeMode(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.setOnPreferenceChangeListener(this);
     }
 
     private static final String FILE = "/sys/class/mdnie/mdnie/mode";

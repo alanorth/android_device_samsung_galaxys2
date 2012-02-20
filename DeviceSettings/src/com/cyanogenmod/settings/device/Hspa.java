@@ -20,14 +20,16 @@ import android.content.Context;
 
 import android.content.SharedPreferences;
 import android.util.AttributeSet;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
 
-public class Hspa extends Preference implements OnPreferenceChangeListener {
+public class Hspa extends ListPreference implements OnPreferenceChangeListener {
 
     public Hspa(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.setOnPreferenceChangeListener(this);
     }
 
     private static final String FILE = "/dev/null";

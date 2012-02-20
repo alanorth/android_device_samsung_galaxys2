@@ -20,13 +20,15 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.content.SharedPreferences;
 import android.preference.Preference;
+import android.preference.ListPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
 
-public class mDNIeOutdoor extends Preference implements OnPreferenceChangeListener {
+public class mDNIeOutdoor extends ListPreference implements OnPreferenceChangeListener {
 
     public mDNIeOutdoor(Context context, AttributeSet attrs) {
-		super(context, attrs);
+        super(context, attrs);
+        this.setOnPreferenceChangeListener(this);
     }
 
     private static final String FILE = "/sys/class/mdnie/mdnie/outdoor";

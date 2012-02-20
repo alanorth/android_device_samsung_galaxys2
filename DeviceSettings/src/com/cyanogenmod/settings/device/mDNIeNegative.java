@@ -16,17 +16,20 @@
 
 package com.cyanogenmod.settings.device;
 
+import java.io.IOException;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.content.SharedPreferences;
 import android.preference.Preference;
+import android.preference.ListPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
 
-public class mDNIeNegative extends Preference implements OnPreferenceChangeListener {
+public class mDNIeNegative extends ListPreference implements OnPreferenceChangeListener {
 
     public mDNIeNegative(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.setOnPreferenceChangeListener(this);
     }
 
     private static final String FILE = "/sys/class/mdnie/mdnie/negative";
@@ -45,11 +48,22 @@ public class mDNIeNegative extends Preference implements OnPreferenceChangeListe
         }
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        Utils.writeValue(FILE, sharedPrefs.getString(DeviceSettings.KEY_MDNIE_NEGATIVE, "1"));
+        Utils.writeValue(FILE, sharedPrefs.getString(DeviceSettings.KEY_MDNIE_NEGATIVE, "0"));
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        // negative is owned by root... wtf?
+        try {
+            Process p = Runtime.getRuntime().exec("chmod 777 " + FILE);
+        } catch (IOException ex) { ex.printStackTrace(); }
+
         Utils.writeValue(FILE, (String) newValue);
+
+        // restore file perms
+        try {
+            Process p = Runtime.getRuntime().exec("chmod 644 " + FILE);
+        } catch (IOException ex) { ex.printStackTrace(); }
+
         return true;
     }
 
