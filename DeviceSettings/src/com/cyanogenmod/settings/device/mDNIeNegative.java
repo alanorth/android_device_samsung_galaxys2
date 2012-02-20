@@ -52,18 +52,7 @@ public class mDNIeNegative extends ListPreference implements OnPreferenceChangeL
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        // negative is owned by root... wtf?
-        try {
-            Process p = Runtime.getRuntime().exec("chmod 777 " + FILE);
-        } catch (IOException ex) { ex.printStackTrace(); }
-
         Utils.writeValue(FILE, (String) newValue);
-
-        // restore file perms
-        try {
-            Process p = Runtime.getRuntime().exec("chmod 644 " + FILE);
-        } catch (IOException ex) { ex.printStackTrace(); }
-
         return true;
     }
 
