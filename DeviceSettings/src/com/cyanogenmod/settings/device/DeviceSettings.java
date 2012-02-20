@@ -44,6 +44,7 @@ public class DeviceSettings extends FragmentActivity {
     public static final String KEY_USE_GYRO_CALIBRATION = "use_gyro_calibration";
     public static final String KEY_CALIBRATE_GYRO = "calibrate_gyro";
     public static final String KEY_TOUCHSCREEN_SENSITIVITY = "touchscreen_sensitivity";
+    public static final String KEY_TOUCHKEY_LIGHT = "touchkey_light";
 
     ViewPager mViewPager;
     TabsAdapter mTabsAdapter;
