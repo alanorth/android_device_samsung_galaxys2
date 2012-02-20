@@ -43,6 +43,7 @@ public class DeviceSettings extends FragmentActivity {
     public static final String KEY_HSPA = "hspa";
     public static final String KEY_USE_GYRO_CALIBRATION = "use_gyro_calibration";
     public static final String KEY_CALIBRATE_GYRO = "calibrate_gyro";
+    public static final String KEY_TOUCHSCREEN_SENSITIVITY = "touchscreen_sensitivity";
 
     ViewPager mViewPager;
     TabsAdapter mTabsAdapter;

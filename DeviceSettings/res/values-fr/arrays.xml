@@ -32,6 +32,15 @@
         <item>2.2 (Par défaut)</item>
         <item>1.9</item>
     </string-array>
+
+    <string-array name="touchscreen_sensitivity_entries">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50 (Par défaut)</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
         
     <string-array name="hspa_entries">
 	<item>UMTS seulement</item>

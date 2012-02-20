@@ -27,6 +27,7 @@ public class mDNIeFragmentActivity extends PreferenceFragment {
     private mDNIeNegative mmDNIeNegative;
     private mDNIeOutdoor mmDNIeOutdoor;
     private PanelGamma mPanelGamma;
+    private TouchscreenSensitivity mTouchscreenSensitivity;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,9 @@ public class mDNIeFragmentActivity extends PreferenceFragment {
 
         mPanelGamma = (PanelGamma) findPreference(DeviceSettings.KEY_PANEL_GAMMA);
         mPanelGamma.setEnabled(mPanelGamma.isSupported());
+
+        mTouchscreenSensitivity = (TouchscreenSensitivity) findPreference(DeviceSettings.KEY_TOUCHSCREEN_SENSITIVITY);
+        mTouchscreenSensitivity.setEnabled(mTouchscreenSensitivity.isSupported());
     }
 
 }

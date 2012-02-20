@@ -3,6 +3,7 @@
     <string name="app_name">Paramètres Galaxy S II</string>
 
     <string name="category_mdnie_title">Ecran</string>
+    <string name="screen_colors_title">Couleurs</string>
     <string name="mdnie_scenario_title_head">Scénario</string>
     <string name="mdnie_scenario_summary_head">Définit le scénario mDNIe</string>
     <string name="mdnie_mode_title_head">Mode</string>
@@ -13,6 +14,9 @@
     <string name="mdnie_outdoor_summary_head">Active/désactive le mode extérieur</string>
     <string name="panel_gamma_title_head">Gamma écran</string>
     <string name="panel_gamma_summary_head">Définit la valeur de gamma de l\'écran</string>
+    <string name="touchscreen_subcat_title">Tactile</string>
+    <string name="touchscreen_sensitivity_title_head">Sensibilité</string>
+    <string name="touchscreen_sensitivity_summary_head">Définit la sensibilité du toucher</string>
 
     <string name="category_sensors_title">Capteurs</string>
     <string name="gyro_subcat_title">Gyroscope</string>
