@@ -5,10 +5,10 @@
     <string name="category_mdnie_title">Ecran</string>
     <string name="mdnie_scenario_title_head">Scénario</string>
     <string name="mdnie_scenario_summary_head">Définit le scénario mDNIe</string>
-    <string name="mdnie_mode_title_head">Modes</string>
+    <string name="mdnie_mode_title_head">Mode</string>
     <string name="mdnie_mode_summary_head">Définit le mode mDNIe</string>
     <string name="mdnie_negative_title_head">Mode négatif</string>
-    <string name="mdnie_negative_summary_head">Active/désactive le mode négatif</string>
+    <string name="mdnie_negative_summary_head">Active/désactive les couleurs inversées</string>
     <string name="mdnie_outdoor_title_head">Mode extérieur</string>
     <string name="mdnie_outdoor_summary_head">Active/désactive le mode extérieur</string>
 
