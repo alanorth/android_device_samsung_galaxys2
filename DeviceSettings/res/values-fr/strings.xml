@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paramètres Galaxy S II</string>
+
+    <string name="category_mdnie_title">Ecran</string>
+    <string name="mdnie_scenario_title_head">Scénario</string>
+    <string name="mdnie_scenario_summary_head">Définit le scénario mDNIe</string>
+    <string name="mdnie_mode_title_head">Modes</string>
+    <string name="mdnie_mode_summary_head">Définit le mode mDNIe</string>
+    <string name="mdnie_negative_title_head">Mode négatif</string>
+    <string name="mdnie_negative_summary_head">Active/désactive le mode négatif</string>
+    <string name="mdnie_outdoor_title_head">Mode extérieur</string>
+    <string name="mdnie_outdoor_summary_head">Active/désactive le mode extérieur</string>
+
+    <string name="category_radio_title">Radio</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">Activer HSDPA/HSUPA</string>
+</resources>
