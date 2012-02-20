@@ -45,7 +45,7 @@ public class mDNIeOutdoor extends Preference implements OnPreferenceChangeListen
         }
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        Utils.writeValue(FILE, sharedPrefs.getString(DeviceSettings.KEY_MDNIE_OUTDOOR, "1"));
+        Utils.writeValue(FILE, sharedPrefs.getString(DeviceSettings.KEY_MDNIE_OUTDOOR, "0"));
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
