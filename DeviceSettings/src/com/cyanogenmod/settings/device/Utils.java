@@ -20,6 +20,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Context;
 
 public class Utils {
 
@@ -61,4 +64,16 @@ public class Utils {
         return new File(filename).exists();
     }
 
+
+    public static void showDialog(Context ctx, String title, String message) {
+        final AlertDialog alertDialog = new AlertDialog.Builder(ctx).create();
+        alertDialog.setTitle(title);
+        alertDialog.setMessage(message);
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+           public void onClick(DialogInterface dialog, int which) {
+              alertDialog.dismiss();
+           }
+        });
+        alertDialog.show();
+    }
 }

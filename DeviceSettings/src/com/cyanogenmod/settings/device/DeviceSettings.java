@@ -41,6 +41,8 @@ public class DeviceSettings extends FragmentActivity {
     public static final String KEY_MDNIE_OUTDOOR = "mdnie_outdoor";
     public static final String KEY_PANEL_GAMMA = "panel_gamma";
     public static final String KEY_HSPA = "hspa";
+    public static final String KEY_USE_GYRO_CALIBRATION = "use_gyro_calibration";
+    public static final String KEY_CALIBRATE_GYRO = "calibrate_gyro";
 
     ViewPager mViewPager;
     TabsAdapter mTabsAdapter;
@@ -60,9 +62,11 @@ public class DeviceSettings extends FragmentActivity {
 
         mTabsAdapter = new TabsAdapter(this, mViewPager);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.category_radio_title),
-                RadioFragmentActivity.class, null);        
+                RadioFragmentActivity.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.category_mdnie_title),
                 mDNIeFragmentActivity.class, null);
+        mTabsAdapter.addTab(bar.newTab().setText(R.string.category_sensors_title),
+                SensorsFragmentActivity.class, null);
 
         if (savedInstanceState != null) {
             bar.setSelectedNavigationItem(savedInstanceState.getInt("tab", 0));

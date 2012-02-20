@@ -13,6 +13,13 @@
     <string name="mdnie_outdoor_summary_head">Enable/Disable outdoor mode</string>
     <string name="panel_gamma_title_head">Screen Gamma</string>
     <string name="panel_gamma_summary_head">Set screen gamma value</string>
+    
+    <string name="category_sensors_title">Sensors</string>
+    <string name="gyro_subcat_title">Gyroscope</string>
+    <string name="use_gyro_calibration_title_head">Use calibration data</string>
+    <string name="use_gyro_calibration_summary_head">Use the gyroscope calibration values. Do a calibration after checking this!</string>
+    <string name="calibrate_gyro_title_head">Calibrate</string>
+    <string name="calibrate_gyro_summary_head">Put your phone on a flat surface, and press this to calibrate</string>
 
     <string name="category_radio_title">Radio</string>
     <string name="hspa_title_head">HSPA</string>
