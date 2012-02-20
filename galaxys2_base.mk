@@ -68,7 +68,8 @@ PRODUCT_PACKAGES := \
     TvOut \
     TvOutHack \
     camera.exynos4 \
-    GalaxyS2Settings
+    GalaxyS2Settings \
+    SamsungServiceMode
 
 # Charger
 #PRODUCT_PACKAGES += \
