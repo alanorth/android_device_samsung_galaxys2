@@ -38,4 +38,13 @@
   			android:entryValues="@array/mdnie_outdoor_entries_values"
   			android:defaultValue="0" />
 
+    <!-- Panel gamma -->
+    <com.cyanogenmod.settings.device.PanelGamma
+                android:key="panel_gamma"
+                android:title="@string/panel_gamma_title_head"
+                android:summary="@string/panel_gamma_summary_head"
+                android:entries="@array/panel_gamma_entries"
+                        android:entryValues="@array/panel_gamma_entries_values"
+                        android:defaultValue="0" />
+
 </PreferenceScreen>

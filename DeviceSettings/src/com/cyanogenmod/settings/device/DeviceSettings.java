@@ -39,6 +39,7 @@ public class DeviceSettings extends FragmentActivity {
     public static final String KEY_MDNIE_MODE = "mdnie_mode";
     public static final String KEY_MDNIE_NEGATIVE = "mdnie_negative";
     public static final String KEY_MDNIE_OUTDOOR = "mdnie_outdoor";
+    public static final String KEY_PANEL_GAMMA = "panel_gamma";
     public static final String KEY_HSPA = "hspa";
 
     ViewPager mViewPager;

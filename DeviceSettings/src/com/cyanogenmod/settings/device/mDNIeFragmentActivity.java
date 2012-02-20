@@ -26,6 +26,7 @@ public class mDNIeFragmentActivity extends PreferenceFragment {
     private mDNIeMode mmDNIeMode;
     private mDNIeNegative mmDNIeNegative;
     private mDNIeOutdoor mmDNIeOutdoor;
+    private PanelGamma mPanelGamma;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,9 @@ public class mDNIeFragmentActivity extends PreferenceFragment {
 
         mmDNIeOutdoor = (mDNIeOutdoor) findPreference(DeviceSettings.KEY_MDNIE_OUTDOOR);
         mmDNIeOutdoor.setEnabled(mDNIeOutdoor.isSupported());
+
+        mPanelGamma = (PanelGamma) findPreference(DeviceSettings.KEY_PANEL_GAMMA);
+        mPanelGamma.setEnabled(mPanelGamma.isSupported());
     }
 
 }
