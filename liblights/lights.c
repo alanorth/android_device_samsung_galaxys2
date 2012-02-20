@@ -44,7 +44,7 @@ char const*const PANEL_FILE
 
 char const*const BUTTON_POWER
         = "/sys/class/sec/sec_touchkey/enable_disable";
-        
+
 char const*const BUTTON_FILE
         = "/sys/class/sec/sec_touchkey/brightness";
 
@@ -59,7 +59,6 @@ load_settings()
 {
     FILE* fp = fopen("/data/.disable_touchlight", "r");
     if (!fp) {
-        LOGD("Can't read /data/.disable_touchlight");
         g_enable_touchlight = 1;
     } else {
         g_enable_touchlight = (int)(fgetc(fp));
@@ -68,7 +67,6 @@ load_settings()
         else
             g_enable_touchlight = 0;
 
-        LOGD("Touchlight enabled: %d", g_enable_touchlight);
         fclose(fp);
     }
 }
