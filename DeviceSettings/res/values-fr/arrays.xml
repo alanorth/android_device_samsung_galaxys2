@@ -8,13 +8,13 @@
 	<item>Caméra</item>
 	<item>Navigation</item>
 	<item>Gallerie</item>
-        <item>VT</item>
+    <item>VT</item>
     </string-array>
 
    <string-array name="mdnie_mode_entries">
 	<item>Standard (Par défaut)</item>
 	<item>Dynamique</item>
-        <item>Naturel</item>
+    <item>Naturel</item>
 	<item>Vidéo</item>
     </string-array>
 
@@ -29,8 +29,8 @@
     </string-array>
 
     <string-array name="panel_gamma_entries">
-        <item>2.2 (Par défaut)</item>
-        <item>1.9</item>
+    <item>2.2 (Par défaut)</item>
+    <item>1.9</item>
     </string-array>
         
     <string-array name="hspa_entries">
