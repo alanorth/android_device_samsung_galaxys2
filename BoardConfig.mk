@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright (C) 2012 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -72,9 +72,6 @@ BOARD_USE_SECTVOUT := true
 
 # Audio
 BOARD_USE_YAMAHAPLAYER := true
-
-# OMX
-BOARD_USE_SAMSUNG_OMX := true
 
 # Camera
 ifeq ($(USE_CAMERA_STUB),false)
