@@ -35,11 +35,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/samsung/galaxys2/configs/vold.fstab:system/etc/vold.fstab \
 
-# omx
+# Media
 PRODUCT_COPY_FILES += \
-	device/samsung/galaxys2/configs/media_profiles.xml:system/etc/media_profiles.xml \
-	device/samsung/galaxys2/configs/secomxregistry:system/etc/secomxregistry \
-	device/samsung/galaxys2/configs/somxreg.conf:system/etc/somxreg.conf
+	device/samsung/galaxys2/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
