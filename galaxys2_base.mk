@@ -146,5 +146,5 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 
 # Include exynos4 platform specific parts
-#$(call inherit-product, hardware/sec/exynos4/exynos4.mk)
-#$(call inherit-product, hardware/sec/exynos4/Android.mk)
+$(call inherit-product, hardware/samsung/exynos4/exynos4.mk)
+$(call inherit-product, hardware/samsung/exynos4/Android.mk)
