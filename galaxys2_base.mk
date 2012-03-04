@@ -61,13 +61,14 @@ PRODUCT_PACKAGES := \
     com.android.future.usb.accessory \
     TvOut \
     TvOutHack \
-    camera.exynos4 \
     GalaxyS2Settings \
     SamsungServiceMode
 
 # Camera
 PRODUCT_PACKAGES += \
-	Camera
+	Camera \
+	camera.exynos4 \
+	libs5pjpeg
 
 PRODUCT_COPY_FILES += \
 	device/samsung/galaxys2/configs/media_profiles.xml:system/etc/media_profiles.xml
