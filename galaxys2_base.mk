@@ -66,7 +66,9 @@ PRODUCT_PACKAGES := \
     TvOutHack \
     camera.exynos4 \
     GalaxyS2Settings \
-    SamsungServiceMode
+    SamsungServiceMode \
+    libhwconverter \
+    libswconverter
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -84,6 +86,7 @@ PRODUCT_PACKAGES += \
     libsecmfcapi
 
 # OMX
+BOARD_HAL_PATH := device/samsung/galaxys2
 BOARD_HMM_PATH := device/samsung/galaxys2/multimedia
 
 PRODUCT_PACKAGES += \
